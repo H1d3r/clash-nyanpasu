@@ -80,6 +80,8 @@ jobs:
 
       - name: Pnpm install
         shell: bash
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
         run: |
           pnpm i
       - name: Download Sidecars aarch64
